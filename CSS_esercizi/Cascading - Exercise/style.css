@@ -1,0 +1,23 @@
+#padre {
+  color:red;
+}
+.link1 {
+ color:inherit;
+}
+.link2{
+    color: initial;
+}
+
+.link3{
+color: aqua;
+}
+.content1{
+    border: solid blueviolet 3px;
+    color: whitesmoke;
+    background-color:antiquewhite;
+    margin-left: 10px;
+
+}
+.variant-em {
+    background-color: blueviolet;
+}

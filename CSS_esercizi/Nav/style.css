@@ -1,0 +1,68 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+ }
+ li,
+ h2,
+ ul
+  {
+     display: inline-block;
+ }
+ 
+ .navbar-right{
+     text-align: right;
+ }
+ 
+ 
+ navbar {
+     background-color:bisque;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 50px;
+     padding: 15px;
+ }
+ 
+ a {
+     text-decoration: none;
+     color: black;
+ }
+ 
+ li{
+     padding-left: 20px;
+ }
+ 
+ .setinput,
+ button {
+ padding: 10px;
+ }
+ 
+ button:focus{
+     background-color: red;
+     color: white;
+ }
+ 
+ a:hover{
+     color: gray;
+ }
+ 
+ 
+ @media screen and (max-width:768px) {
+  navbar {
+     background-color: pink;
+  }
+ 
+  ul,
+  .setinput,
+  button {
+     display: none;
+  }
+ 
+  .hamburger div {
+     width: 30px;
+     height: 3px;
+     background-color: black;
+     margin: 5px 0;
+  }
+ }
