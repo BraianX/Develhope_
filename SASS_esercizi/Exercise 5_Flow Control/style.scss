@@ -1,0 +1,97 @@
+@use "module-colors.scss" as m;
+@use "function-rem.scss" as f;
+
+$color-primary: m.$color-primary;
+$color-secondary: m.$color-secondary;
+$color-tertiary: m.$color-tertiary;
+
+@mixin box($color1, $color2, $color3, $size) {
+  border: f.rem(1) solid $color1;
+  text-align: center;
+  padding: f.rem(16);
+  font-size: $size;
+  &:nth-child(odd) {
+    color: $color2;
+  }
+
+  &:nth-child(even) {
+    color: $color3;
+  }
+}
+
+@for $var from 1 to 20 {
+  .numbers div:nth-child(#{$var}) {
+    background-color: darken(white, $var * 5%);
+    color: lighten(black, $var * 5%);
+  }
+
+  @if $var == 10 {
+    .numbers div:nth-child(#{$var}) {
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
+  }
+}
+
+$sizes: f.rem(16), f.rem(32), f.rem(48);
+
+@each $size in $sizes {
+  .fs-#{$size} {
+    font-size: #{$size};
+  }
+}
+
+.exercise {
+  border: f.rem(1) solid $color-primary;
+
+  & .h1 {
+    color: $color-tertiary;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $color-secondary;
+
+    &_subtitle {
+      @extend .h1;
+      text-decoration: none;
+      border: f.rem(1) solid $color-primary;
+      padding: f.rem(16);
+      width: fit-content;
+      margin: auto;
+    }
+  }
+
+  .numbers {
+    display: flex;
+    justify-content: space-between;
+    padding: f.rem(16);
+
+    .fs-1rem,
+    .fs-2rem,
+    .fs-3rem {
+      border: f.rem(1) solid red;
+      width: f.rem(45);
+      height: f.rem(45);
+    }
+  }
+
+  .all-boxes {
+    display: flex;
+    padding: 1rem;
+
+    .p-box {
+      @include box(
+        $color-tertiary,
+        $color-secondary,
+        $color-primary,
+        f.rem(16)
+      );
+    }
+  }
+  .box-alone {
+    padding: 1rem;
+
+    .p-box2 {
+      @include box($color-secondary, $color-tertiary, none, f.rem(24));
+    }
+  }
+}

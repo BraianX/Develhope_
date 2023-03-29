@@ -1,0 +1,50 @@
+.exercise {
+  border: 0.0625rem solid red;
+}
+.exercise .h1,
+.exercise .h1_subtitle {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.exercise .h1_subtitle {
+  text-decoration: none;
+  border: 0.0625rem solid red;
+  padding: 1rem;
+  width: fit-content;
+  margin: auto;
+}
+.exercise .all-boxes {
+  display: flex;
+  padding: 1rem;
+}
+.exercise .all-boxes .p-box {
+  border: 0.0625rem solid green;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.exercise .all-boxes .p-box:nth-child(odd) {
+  color: blue;
+}
+.exercise .all-boxes .p-box:nth-child(even) {
+  color: red;
+}
+.exercise .box-alone {
+  padding: 1rem;
+}
+.exercise .box-alone .p-box2 {
+  border: 0.0625rem solid blue;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.exercise .box-alone .p-box2:nth-child(odd) {
+  color: green;
+}
+.exercise .box-alone .p-box2:nth-child(even) {
+  color: none;
+}
+
+/*# sourceMappingURL=style.css.map */

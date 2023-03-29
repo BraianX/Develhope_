@@ -1,0 +1,52 @@
+@use "module-colors.scss" as m;
+@use "function-rem.scss" as f;
+
+$color-primary: m.$color-primary;
+$color-secondary: m.$color-secondary;
+$color-tertiary: m.$color-tertiary;
+
+@mixin box($color1, $color2, $color3, $size) {
+  border: f.rem(1) solid $color1;
+  text-align: center;
+  padding: f.rem(16);
+  font-size: $size;
+  &:nth-child(odd) {
+    color: $color2;
+  }
+
+  &:nth-child(even) {
+    color: $color3;
+  }
+}
+
+.exercise {
+  border: f.rem(1) solid $color-primary;
+
+  .exercise-title {
+    color: $color-tertiary;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: $color-secondary;
+  }
+
+  .all-boxes {
+    display: flex;
+    padding: 1rem;
+
+    .p-box {
+      @include box(
+        $color-tertiary,
+        $color-secondary,
+        $color-primary,
+        f.rem(16)
+      );
+    }
+  }
+  .box-alone {
+    padding: 1rem;
+
+    .p-box2 {
+      @include box($color-secondary, $color-tertiary, none, f.rem(24));
+    }
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=form, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Convalidazione dei tuoi dati</h1>
+    <form>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        placeholder="Inserisci email"
+      />
+      <br />
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        placeholder="Inserisci password_user"
+      />
+      <br />
+      <br />
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required  placeholder="Inserisci Nome"/>
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname" required placeholder="Inserisci Cognome"/>
+      <br /><br />
+      <label for="date_born">Data di Nascita</label>
+      <input type="date" name="date_born" id="date_born" required />
+      <br /><br />
+      <label for="telefon">Telefono</label>
+      <input type="tel" name="telefon" id="telefon" required placeholder="Es. 3453849294"/>
+      <br /><br />
+      <label for="plain">Seleziona Piano</label>
+      <select id="plain" name="plain" required>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+        <option value="superGold">Super Gold</option>
+      </select>
+      <br /><br />
+      <label for="pro_plain">Vuoi la Super Gold Edition Delux?</label>
+      <br />
+      <input
+        type="checkbox"
+        value="goldEdition"
+        id="pro_plain"
+        name="pro_plain"
+        required
+      />
+      <br /><br />
+      <h2>Inserire Dati Carta di Credito</h2>
+      <label for="cart">Numer Carta:</label>
+      <input
+        type="text"
+        name="cart"
+        id="cart"
+        required
+        maxlength="16"
+        minlength="16"
+      />
+      <br /><br />
+      <label for="cvc">CVC</label>
+
+      <input
+        type="text"
+        name="cvc"
+        id="cvc"
+        required
+        maxlength="3"
+        minlength="3"
+      />
+      <br /><br />
+      <label for="data_sc">Data Scadenza</label>
+      <input type="date" name="data_sc" id="data_sc" required />
+      <br /><br />
+      <label for="address_facturatio">Indirizzo di Fatturazione</label>
+      <input
+        type="text"
+        required
+        name="address_facturatio"
+        id="address_facturatio"
+      />
+      <br><br>
+      <button type="reset">Resetta</button>
+      <button type="submit">Conferma</button>
+    </form>
+  </body>
+</html>

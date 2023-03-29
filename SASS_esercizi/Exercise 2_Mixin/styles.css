@@ -1,0 +1,42 @@
+.exercise {
+  border: 1px solid red;
+}
+.exercise .exercise-title {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.exercise .all-boxes {
+  display: flex;
+  padding: 1rem;
+}
+.exercise .all-boxes .p-box {
+  border: 1px solid green;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.exercise .all-boxes .p-box:nth-child(odd) {
+  color: blue;
+}
+.exercise .all-boxes .p-box:nth-child(even) {
+  color: red;
+}
+.exercise .box-alone {
+  padding: 1rem;
+}
+.exercise .box-alone .p-box2 {
+  border: 1px solid blue;
+  text-align: center;
+  padding: 1rem;
+  font-size: 24px;
+}
+.exercise .box-alone .p-box2:nth-child(odd) {
+  color: green;
+}
+.exercise .box-alone .p-box2:nth-child(even) {
+  color: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
